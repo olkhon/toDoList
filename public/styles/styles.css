@@ -4,23 +4,14 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: ;
-    background-color: ;
-  }
+body {}
 
-header {
+header {}
 
+.input {
+    flex-direction: row;
 }
 
-  .input {
+.list-items {}
 
-  }
- 
-  .list-items {
-
-  }
-  
-  footer {
-      
-  }
+footer {}
