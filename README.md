@@ -1,6 +1,7 @@
 # **ToDoList - Introduction**
 
-A basic to-do-list implemented with JavaScript.
+A basic to-do-list implemented with JavaScript. You may checkout out the project here:
+ [DoIt](https://olkhon.github.io/toDoList/)
 
 
 ## **Table of Contents**
