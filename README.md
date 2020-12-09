@@ -12,11 +12,11 @@ A basic to-do-list implemented with JavaScript. You may checkout out the project
 * [Sources](#Sources)
 * [Outlook](#Outlook)
 
-## **Contributors**{#Contributors}
+## Contributors
 ---
 The project was planned, designed and implemented by Janis, Hermann and Alex.
 
-## **Functionality**{#Functionality}
+## Functionality
 ---
 To Do List delivers the following functionality to the user:
 
@@ -27,7 +27,7 @@ To Do List delivers the following functionality to the user:
 5. unmark new added input
 6. edit new added input
 
-## **Technologies**{#Technologies}
+## Technologies
 ---
 The project uses the following technologies:
 
@@ -36,14 +36,14 @@ The project uses the following technologies:
 3. CSS
 4. Git
 
-## **Sources**{#Sources}
+## Sources
 ---
 In the project we used different sources for problem-solving e.g.:
 
 1. [W3 Schools](https://www.w3schools.com/howto/howto_js_todolist.asp)
 2. [MDN Docs](https://developer.mozilla.org/en-US/)
 
-## **Outlook**{#Outlook}
+## Outlook
 ---
 Possible refactoring will be transforming the Js code into React moduls and saving
 user input to a database.
