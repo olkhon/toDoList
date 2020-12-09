@@ -1,5 +1,7 @@
-// listen for submit event
+// to-do list
+const toDoList = document.getElementById('itemsList');
 
+// listen for submit event
 let addSubmit = document.getElementById('add');
 
 const addToDo = (event) => {
@@ -14,8 +16,6 @@ addSubmit.addEventListener('click', addToDo);
 
 const deleteButton = document.getElementsByTagName("button");
 
-
-
 for (let i = 0; i < deleteButton.length; i++){
     deleteButton[i].addEventListener("click", function () {
         const toDoToDelete = document.getElementsByTagName("li");
@@ -24,3 +24,22 @@ for (let i = 0; i < deleteButton.length; i++){
 }
 
 //
+
+// eventHandler for toggle to-do to be striked out when done or unstrike
+const toggleDone = (e) => {
+/*   console.log(this);
+  console.log(e.target); */
+  e.target.classList.toggle('strike');
+}
+
+// eventListener for toggeling done/todo items
+toDoList.addEventListener('click', toggleDone);
+
+// add new Item to do list
+
+let listItems = document.getElementById('itemsList');
+
+addSubmit.addEventListener('click', () => {
+    let newLi = document.createElement('LI');
+    listItems.appendChild(newLi);
+});
