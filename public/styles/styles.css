@@ -12,5 +12,9 @@
 /* -------------- add to-do formula -------------- */
 
 /* -------------- to-do list -------------- */
+.strike {
+  text-decoration: line-through;
+  background-color: gray;
+}
 
 /* -------------- footer -------------- */
