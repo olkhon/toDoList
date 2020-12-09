@@ -6,13 +6,13 @@ A basic to-do-list implemented with JavaScript. You may checkout out the project
 
 ## **Table of Contents**
 ---
-* [`Contributors`](#Contributors)
+* [Contributors](#Contributors)
 * [Functionality](#Functionality)
 * [Technologies](#Technologies)
 * [Sources](#Sources)
 * [Outlook](#Outlook)
 
-## **Contributors**{#Contributors}
+## **Contributors**(#Contributors)
 ---
 The project was planned, designed and implemented by Janis, Hermann and Alex.
 
