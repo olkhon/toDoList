@@ -1,17 +1,20 @@
+/* -------------- base -------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {}
+/* -------------- global -------------- */
 
-header {}
+/* -------------- header -------------- */
 
-.input {
-    flex-direction: row;
+/* -------------- add to-do formula -------------- */
+
+/* -------------- to-do list -------------- */
+.strike {
+  text-decoration: line-through;
+  background-color: gray;
 }
 
-.list-items {}
-
-footer {}
+/* -------------- footer -------------- */
