@@ -1,26 +1,36 @@
+/* -------------- base -------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-    font-family: ;
-    background-color: ;
-  }
+/* -------------- global -------------- */
 
-header {
+/* -------------- header -------------- */
 
+/* -------------- add to-do formula -------------- */
+
+/* -------------- to-do list -------------- */
+#itemsList li {
+  list-style: none;
+  background-color: rgb(182, 238, 182);
+  line-height: 1.5em;
 }
 
-  .input {
+#itemsList li::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+}
 
-  }
- 
-  .list-items {
+#itemsList .strike {
+  text-decoration: line-through;
+  background-color: lightgray;
+}
 
-  }
-  
-  footer {
-      
-  }
+#itemsList .strike::before {
+  content: "\2713";
+}
+
+/* -------------- footer -------------- */
