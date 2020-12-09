@@ -12,7 +12,7 @@ A basic to-do-list implemented with JavaScript. You may checkout out the project
 * [Sources](#Sources)
 * [Outlook](#Outlook)
 
-## **Contributors**{#Contributors}
+## **Contributors{#Contributors}**
 ---
 The project was planned, designed and implemented by Janis, Hermann and Alex.
 
