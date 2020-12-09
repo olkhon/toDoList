@@ -14,12 +14,23 @@
 /* -------------- to-do list -------------- */
 #itemsList li {
   list-style: none;
+  background-color: rgb(182, 238, 182);
   line-height: 1.5em;
+}
+
+#itemsList li::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
 }
 
 #itemsList .strike {
   text-decoration: line-through;
   background-color: lightgray;
+}
+
+#itemsList .strike::before {
+  content: "\2713";
 }
 
 /* -------------- footer -------------- */
