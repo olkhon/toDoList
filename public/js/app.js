@@ -8,4 +8,11 @@ const addToDo = (event) => {
 
 addSubmit.addEventListener('click', addToDo);
 
-//
+// add new Item to do list
+
+let listItems = document.getElementById('itemsList');
+
+addSubmit.addEventListener('click', () => {
+    let newLi = document.createElement('LI');
+    listItems.appendChild(newLi);
+});
