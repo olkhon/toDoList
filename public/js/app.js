@@ -27,9 +27,10 @@ for (let i = 0; i < deleteButton.length; i++){
 
 // eventHandler for toggle to-do to be striked out when done or unstrike
 const toggleDone = (e) => {
-/*   console.log(this);
-  console.log(e.target); */
+  console.log(this);
+  console.log(e.target);
   e.target.classList.toggle('strike');
+  e.target.parentNode.appendChild(e.target);
 }
 
 // eventListener for toggeling done/todo items
