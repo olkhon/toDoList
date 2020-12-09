@@ -12,9 +12,14 @@
 /* -------------- add to-do formula -------------- */
 
 /* -------------- to-do list -------------- */
-.strike {
+#itemsList li {
+  list-style: none;
+  line-height: 1.5em;
+}
+
+#itemsList .strike {
   text-decoration: line-through;
-  background-color: gray;
+  background-color: lightgray;
 }
 
 /* -------------- footer -------------- */
