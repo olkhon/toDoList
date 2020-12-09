@@ -12,24 +12,32 @@ addSubmit.addEventListener('click', addToDo);
 
 //
 
-// Click on a delete button to hide the current list item
+// Click on a delete button to delete the current list item
 
 const deleteButton = document.getElementsByTagName("button");
 
-for (let i = 0; i < deleteButton.length; i++){
-    deleteButton[i].addEventListener("click", function () {
+const arrayDeleteButton = Array.from(deleteButton);
+//console.log(arrayDeleteButton);
+for (let i = 0; i < arrayDeleteButton.length; i++) {
+    arrayDeleteButton[i].addEventListener("click", function() {
         const toDoToDelete = document.getElementsByTagName("li");
-        toDoToDelete[i].style.display = "none";
+        const arraytoDoToDelete = Array.from(toDoToDelete);
+        for (let j = 0; j < arraytoDoToDelete.length; j++) {
+            arraytoDoToDelete[j].addEventListener('click', function() {
+                arraytoDoToDelete[j].remove();
+            })
+        }
     })
 }
+
 
 //
 
 // eventHandler for toggle to-do to be striked out when done or unstrike
 const toggleDone = (e) => {
-/*   console.log(this);
-  console.log(e.target); */
-  e.target.classList.toggle('strike');
+    /*   console.log(this);
+      console.log(e.target); */
+    e.target.classList.toggle('strike');
 }
 
 // eventListener for toggeling done/todo items
@@ -50,8 +58,6 @@ addSubmit.addEventListener('click', () => {
         newLi.appendChild(textInput);
         listItems.appendChild(newLi);
     } else {
-      alert('Input can't be empty');
+        alert('Input cant be empty ');
     }
 });
-
- 
