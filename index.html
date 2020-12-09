@@ -10,10 +10,10 @@
 
 <body>
     <header>
-        <h1></h1>
-        <aside>
-            <p></p>
-        </aside>
+        <h1>Just To-Do It</h1>
+        <p>A good point for you to draw it up to your plan of pursue?
+            <br> Feel free to list it here!
+        </p>
     </header>
 
     <main>
@@ -23,11 +23,11 @@
             <input type="submit" value="Add" id="add">
         </form>
 
-        <ul>
-            <li>to do 1</li>
-            <li>to do 2</li>
-            <li>to do 3</li>
-            <li>to do 4</li>
+        <ul id="itemsList">
+            <li>to do 1<button>X</button></li>
+            <li>to do 2<button>X</button></li>
+            <li>to do 3<button>X</button></li>
+            <li>to do 4<button>X</button></li>
         </ul>
 
     </main>
@@ -37,9 +37,12 @@
     </footer>
     <script src="public/js/app.js"></script>
     <noscript>
-        <h2>JavaScript Required</h2>
-        <hr>
-        <p>We're sorry, but this ToDo-List App will not work properly without JavaScript enabled.</p>
+        <noscript>
+            <div style="position: fixed; top: 0px; left: 0px; z-index: 3000;
+                        height: 100%; width: 100%; background-color: #FFFFFF">
+                <p style="margin-left: 10px; font-size: 26px;">JavaScript is not enabled.</p>
+            </div>
+        </noscript>
     </noscript>
 </body>
 
