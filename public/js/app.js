@@ -52,6 +52,6 @@ addSubmit.addEventListener('click', () => {
         newLi.appendChild(textInput);
         listItems.appendChild(newLi);
     } else {
-      alert('Input can not be empty');
+      alert('Input cannot be empty');
     }
 });
