@@ -34,10 +34,13 @@ for (let i = 0; i < arrayDeleteButton.length; i++) {
 //
 
 // eventHandler for toggle to-do to be striked out when done or unstrike
-const toggleDone = (e) => {
-    /*   console.log(this);
-      console.log(e.target); */
-    e.target.classList.toggle('strike');
+
+const toggleDone = (event) => {
+  console.log(event.target);
+  /* console.log(this);
+  console.log(event.target); */
+  event.target.classList.toggle('strike');
+  event.target.parentNode.appendChild(event.target);
 }
 
 // eventListener for toggeling done/todo items
@@ -58,6 +61,7 @@ addSubmit.addEventListener('click', () => {
         newLi.appendChild(textInput);
         listItems.appendChild(newLi);
     } else {
-        alert('Input cant be empty ');
+
+      alert('Input cannot be empty');
     }
 });
