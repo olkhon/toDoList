@@ -45,19 +45,20 @@ toDoList.addEventListener('click', toggleDone);
 
 // add new Item to do list
 
-let listItems = document.getElementById('itemsList');
-
-
 addSubmit.addEventListener('click', () => {
 
     let getInput = document.getElementById('inputUser').value;
 
-    if (getInput !== "") {
+    let getJustEmptySpace = getInput.trim();
+
+    if ((getInput !== "") && (getJustEmptySpace.length !== 0)) {
         let newLi = document.createElement('LI');
         let textInput = document.createTextNode(getInput);
         newLi.appendChild(textInput);
         listItems.appendChild(newLi);
-    } else {
+    } else if (getInput === "") {
         alert('Input cant be empty ');
+    } else if (getJustEmptySpace.length === 0) {
+        alert('You cant provide just white spaces');
     }
 });
