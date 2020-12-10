@@ -52,8 +52,9 @@ let listItems = document.getElementById("itemsList");
 
 addSubmit.addEventListener("click", () => {
   let getInput = document.getElementById("inputUser").value;
-
-  if (getInput !== "") {
+  let getJustEmptySpace = getInput.trim();
+  
+  if ((getInput !== "") && (getJustEmptySpace.length !== 0)) {
     //Create LI
     let newLi = document.createElement("LI");
     let textInput = document.createTextNode(getInput);
@@ -69,7 +70,12 @@ addSubmit.addEventListener("click", () => {
     newLi.appendChild(newButton);
     //Append new List Item (newLi)
     listItems.appendChild(newLi);
-  } else {
-    alert("Input cannot be empty");
   }
+  else if (getJustEmptySpace.length === 0) {
+        alert('You cannot provide just white spaces');
+    }
+  else if (getInput === "") {
+        alert('Input cannot be empty ');
+    }
 });
+
