@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+main {
+  background-color: #010031;
+}
+
 /* -------------- global -------------- */
 
 /* -------------- header -------------- */
@@ -13,9 +17,17 @@
 
 /* -------------- to-do list -------------- */
 #itemsList li {
+  margin: 3px auto;
+  width: 30%;
+  padding: 0 3rem;
+  border-radius: 10px;
   list-style: none;
-  background-color: rgb(182, 238, 182);
+  background-color: #f5ffe6;
+  color: #010031;
+  font-size: 1.5em;
   line-height: 1.5em;
+  position: relative;
+  overflow: hidden;
 }
 
 #itemsList li::before {
@@ -26,11 +38,23 @@
 
 #itemsList .strike {
   text-decoration: line-through;
-  background-color: lightgray;
+  color: #0100317e;
 }
 
 #itemsList .strike::before {
   content: "\2713";
+}
+
+button {
+  background-color: #010031;
+  color: #f5ffe6;
+  font-weight: bold;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: absolute;
+  right: 3em;
 }
 
 /* -------------- footer -------------- */
