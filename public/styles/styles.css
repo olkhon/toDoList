@@ -19,7 +19,14 @@ footer {
   margin: 0 auto;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* -------------- header -------------- */
+header {
+  text-align: center;
+}
 
 /* -------------- add to-do formula -------------- */
 
