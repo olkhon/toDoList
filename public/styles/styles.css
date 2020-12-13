@@ -23,6 +23,12 @@ footer {
   text-transform: uppercase;
 }
 
+.underline {
+  text-decoration-line: underline;
+  text-decoration-color: #caf755;
+  text-decoration-thickness: 1px;
+}
+
 /* -------------- header -------------- */
 header {
   text-align: center;
