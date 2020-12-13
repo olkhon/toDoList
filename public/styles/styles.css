@@ -79,6 +79,24 @@ form input[type="text"] {
   color: #3b39db;
 }
 
+form input[type="text"]:hover {
+  cursor: text;
+}
+
+form input[type="text"]:hover::-webkit-input-placeholder {
+  /* Edge */
+  color: #cbf756;
+}
+
+form input[type="text"]:hover:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #cbf756;
+}
+
+form input[type="text"]:hover::placeholder {
+  color: #cbf756;
+}
+
 form input[type="submit"] {
   background-color: #cbf756;
   height: 2.5rem;
@@ -113,6 +131,7 @@ form input[type="submit"] {
 #itemsList li:hover {
   background-color: #3b39db;
   color: #f5ffe6;
+  cursor: pointer;
 }
 
 #itemsList li:hover button {
@@ -152,6 +171,7 @@ button:hover {
   background-color: #cbf756;
   color: #010031;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 /* -------------- footer -------------- */
