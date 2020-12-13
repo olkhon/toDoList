@@ -12,6 +12,12 @@ body {
   color: #f5ffe6;
 }
 
+header,
+main,
+footer {
+  width: 80%;
+}
+
 /* -------------- header -------------- */
 
 /* -------------- add to-do formula -------------- */
