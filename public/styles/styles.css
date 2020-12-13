@@ -12,30 +12,74 @@ body {
   color: #f5ffe6;
 }
 
+header,
+main,
+footer {
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* -------------- header -------------- */
 
 /* -------------- add to-do formula -------------- */
 
 /* -------------- to-do list -------------- */
-#itemsList li {
+
+#itemsList {
   list-style: none;
-  background-color: rgb(182, 238, 182);
-  line-height: 1.5em;
+}
+
+#itemsList li {
+  margin: 3px auto;
+  height: 2.5rem;
+  border-radius: 10px;
+  list-style: none;
+  background-color: #f5ffe6;
+  color: #010031;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  /* FIXME: first word to long -> it will scip down to the next line. nothing will be seen */
+  /* FIXME:  text goes under delete button -> solution: put text in a span element*/
+}
+
+#itemsList li:hover {
+  background-color: #3b39db;
+  color: #f5ffe6;
+}
+
+#itemsList li:hover button {
+  border-color: #3b39db;
 }
 
 #itemsList li::before {
   content: "";
   display: inline-block;
-  width: 1.5em;
+  width: 1.5rem;
+  padding-left: 1rem;
 }
 
 #itemsList .strike {
   text-decoration: line-through;
-  background-color: lightgray;
+  color: #0100317e;
 }
 
 #itemsList .strike::before {
   content: "\2713";
+}
+
+button {
+  background-color: #010031;
+  color: #f5ffe6;
+  font-weight: bold;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #f5ffe6;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 2em;
 }
 
 /* -------------- footer -------------- */
