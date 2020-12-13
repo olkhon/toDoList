@@ -10,6 +10,7 @@ body {
   font-family: "Trebuchet MS", cursive;
   background-color: #010031;
   color: #f5ffe6;
+  height: 100vh;
 }
 
 header,
@@ -17,6 +18,10 @@ main,
 footer {
   width: 80%;
   margin: 0 auto;
+}
+
+main {
+  vertical-align: middle;
 }
 
 .uppercase {
@@ -32,6 +37,8 @@ footer {
 /* -------------- header -------------- */
 header {
   text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 header h1 {
