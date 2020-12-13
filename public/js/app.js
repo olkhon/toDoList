@@ -5,7 +5,7 @@ const toDoList = document.getElementById("itemsList");
 let addSubmit = document.getElementById("add");
 
 const addToDo = (event) => {
-  event.preventDefault();
+    event.preventDefault();
 };
 
 addSubmit.addEventListener("click", addToDo);
@@ -36,11 +36,11 @@ for (let i = 0; i < arrayDeleteButton.length; i++) {
 // eventHandler for toggle to-do to be striked out when done or unstrike
 
 const toggleDone = (event) => {
-  console.log(event.target);
-  /* console.log(this);
-  console.log(event.target); */
-  event.target.classList.toggle("strike");
-  event.target.parentNode.appendChild(event.target);
+    console.log(event.target);
+    /* console.log(this);
+    console.log(event.target); */
+    event.target.classList.toggle("strike");
+    event.target.parentNode.appendChild(event.target);
 };
 
 // eventListener for toggeling done/todo items
@@ -51,31 +51,31 @@ toDoList.addEventListener("click", toggleDone);
 let listItems = document.getElementById("itemsList");
 
 addSubmit.addEventListener("click", () => {
-  let getInput = document.getElementById("inputUser").value;
-  let getJustEmptySpace = getInput.trim();
-  
-  if ((getInput !== "") && (getJustEmptySpace.length !== 0)) {
-    //Create LI
-    let newLi = document.createElement("LI");
-    let textInput = document.createTextNode(getInput);
-    newLi.appendChild(textInput);
-    //Create Button
-    let newButton = document.createElement("button");
-    let buttonText = document.createTextNode("X");
-    newButton.appendChild(buttonText);
-    newButton.addEventListener("click", function () {
-      newLi.remove();
-    });
-    //Create full ToDo (LI + Button)
-    newLi.appendChild(newButton);
-    //Append new List Item (newLi)
-    listItems.appendChild(newLi);
-  }
-  else if (getJustEmptySpace.length === 0) {
+    let getInput = document.getElementById("inputUser").value;
+    let getJustEmptySpace = getInput.trim();
+    document.getElementById('inputUser').value = ''
+
+    if ((getInput !== "") && (getJustEmptySpace.length !== 0)) {
+
+        //Create LI
+        let newLi = document.createElement("LI");
+        let textInput = document.createTextNode(getInput);
+        newLi.appendChild(textInput);
+
+        //Create Button
+        let newButton = document.createElement("button");
+        let buttonText = document.createTextNode("X");
+        newButton.appendChild(buttonText);
+        newButton.addEventListener("click", function() {
+            newLi.remove();
+        });
+        //Create full ToDo (LI + Button)
+        newLi.appendChild(newButton);
+        //Append new List Item (newLi)
+        listItems.appendChild(newLi);
+    } else if (getJustEmptySpace.length === 0) {
         alert('You cannot provide just white spaces');
-    }
-  else if (getInput === "") {
+    } else if (getInput === "") {
         alert('Input cannot be empty ');
     }
 });
-
