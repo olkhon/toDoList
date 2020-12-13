@@ -25,7 +25,7 @@ footer {
 
 .underline {
   text-decoration-line: underline;
-  text-decoration-color: #caf755;
+  text-decoration-color: #cbf756;
   text-decoration-thickness: 1px;
 }
 
@@ -36,7 +36,7 @@ header {
 
 header h1 {
   font-size: 1.5rem;
-  color: #caf755;
+  color: #cbf756;
   margin-bottom: 2rem;
 }
 
@@ -77,6 +77,17 @@ form input[type="text"] {
 }
 ::placeholder {
   color: #3b39db;
+}
+
+form input[type="submit"] {
+  background-color: #cbf756;
+  height: 2.5rem;
+  width: 20%;
+  border: none;
+  font-size: 1.2rem;
+  color: #010031;
+  line-height: 2.5rem;
+  text-align: center;
 }
 /* -------------- to-do list -------------- */
 
@@ -134,11 +145,11 @@ button {
   border-radius: 50%;
   position: absolute;
   top: 0;
-  right: 2em;
+  right: 10%;
 }
 
 button:hover {
-  background-color: #caf755;
+  background-color: #cbf756;
   color: #010031;
   font-weight: bolder;
 }
