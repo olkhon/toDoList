@@ -107,6 +107,12 @@ form input[type="submit"] {
   line-height: 2.5rem;
   text-align: center;
 }
+
+form input[type="submit"]:hover {
+  background-color: #3b39db;
+  color: #cbf756;
+  font-weight: bold;
+}
 /* -------------- to-do list -------------- */
 
 #itemsList {
