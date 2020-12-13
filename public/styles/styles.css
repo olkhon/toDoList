@@ -54,16 +54,31 @@ form {
   border-radius: 10px;
   background-color: #f5ffe6;
   color: #010031;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
 }
 
 form input[type="text"] {
   background-color: #010031;
   height: 2.5rem;
+  width: 70%;
   border: none;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
 }
 
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #3b39db;
+  padding-left: 1rem;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #3b39db;
+  padding-left: 1rem;
+}
+::placeholder {
+  color: #3b39db;
+  padding-left: 1rem;
+}
 /* -------------- to-do list -------------- */
 
 #itemsList {
