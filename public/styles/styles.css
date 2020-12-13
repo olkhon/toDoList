@@ -17,24 +17,41 @@ body {
 /* -------------- add to-do formula -------------- */
 
 /* -------------- to-do list -------------- */
+
+#itemsList {
+  margin: 0 auto;
+  list-style: none;
+}
+
 #itemsList li {
   margin: 3px auto;
-  width: 30%;
-  padding: 0 3rem;
+  height: 2.5rem;
   border-radius: 10px;
   list-style: none;
   background-color: #f5ffe6;
   color: #010031;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   position: relative;
   overflow: hidden;
+  /* FIXME: first word to long -> it will scip down to the next line. nothing will be seen */
+  /* FIXME:  text goes under delete button -> solution: put text in a span element*/
+}
+
+#itemsList li:hover {
+  background-color: #3b39db;
+  color: #f5ffe6;
+}
+
+#itemsList li:hover button {
+  border-color: #3b39db;
 }
 
 #itemsList li::before {
   content: "";
   display: inline-block;
-  width: 1.5em;
+  width: 1.5rem;
+  padding-left: 1rem;
 }
 
 #itemsList .strike {
@@ -50,12 +67,13 @@ button {
   background-color: #010031;
   color: #f5ffe6;
   font-weight: bold;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #f5ffe6;
   border-radius: 50%;
-  flex-shrink: 0;
   position: absolute;
-  right: 3em;
+  top: 0;
+  right: 2em;
 }
 
 /* -------------- footer -------------- */
