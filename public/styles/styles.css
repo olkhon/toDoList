@@ -58,6 +58,12 @@ form {
   line-height: 2.5rem;
 }
 
+form input[type="text"] {
+  background-color: #010031;
+  height: 2.5rem;
+  border: none;
+}
+
 /* -------------- to-do list -------------- */
 
 #itemsList {
