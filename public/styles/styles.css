@@ -16,6 +16,7 @@ header,
 main,
 footer {
   width: 80%;
+  margin: 0 auto;
 }
 
 /* -------------- header -------------- */
@@ -25,7 +26,6 @@ footer {
 /* -------------- to-do list -------------- */
 
 #itemsList {
-  margin: 0 auto;
   list-style: none;
 }
 
