@@ -82,4 +82,10 @@ button {
   right: 2em;
 }
 
+button:hover {
+  background-color: #caf755;
+  color: #010031;
+  font-weight: bolder;
+}
+
 /* -------------- footer -------------- */
