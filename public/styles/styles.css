@@ -45,6 +45,19 @@ header p {
 }
 /* -------------- add to-do formula -------------- */
 
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px auto;
+  height: 3.5rem;
+  border-radius: 10px;
+  background-color: #f5ffe6;
+  color: #010031;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
 /* -------------- to-do list -------------- */
 
 #itemsList {
