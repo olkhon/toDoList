@@ -25,7 +25,7 @@ footer {
 
 .underline {
   text-decoration-line: underline;
-  text-decoration-color: #caf755;
+  text-decoration-color: #cbf756;
   text-decoration-thickness: 1px;
 }
 
@@ -36,7 +36,7 @@ header {
 
 header h1 {
   font-size: 1.5rem;
-  color: #caf755;
+  color: #cbf756;
   margin-bottom: 2rem;
 }
 
@@ -45,6 +45,68 @@ header p {
 }
 /* -------------- add to-do formula -------------- */
 
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px auto;
+  height: 3.5rem;
+  border-radius: 10px;
+  background-color: #f5ffe6;
+  color: #010031;
+}
+
+form input[type="text"] {
+  background-color: #010031;
+  height: 2.5rem;
+  width: 70%;
+  border: none;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  color: #f5ffe6;
+  line-height: 2.5rem;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #3b39db;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #3b39db;
+}
+::placeholder {
+  color: #3b39db;
+}
+
+form input[type="text"]:hover {
+  cursor: text;
+}
+
+form input[type="text"]:hover::-webkit-input-placeholder {
+  /* Edge */
+  color: #cbf756;
+}
+
+form input[type="text"]:hover:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #cbf756;
+}
+
+form input[type="text"]:hover::placeholder {
+  color: #cbf756;
+}
+
+form input[type="submit"] {
+  background-color: #cbf756;
+  height: 2.5rem;
+  width: 20%;
+  border: none;
+  font-size: 1.2rem;
+  color: #010031;
+  line-height: 2.5rem;
+  text-align: center;
+}
 /* -------------- to-do list -------------- */
 
 #itemsList {
@@ -69,6 +131,7 @@ header p {
 #itemsList li:hover {
   background-color: #3b39db;
   color: #f5ffe6;
+  cursor: pointer;
 }
 
 #itemsList li:hover button {
@@ -101,13 +164,14 @@ button {
   border-radius: 50%;
   position: absolute;
   top: 0;
-  right: 2em;
+  right: 10%;
 }
 
 button:hover {
-  background-color: #caf755;
+  background-color: #cbf756;
   color: #010031;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 /* -------------- footer -------------- */
