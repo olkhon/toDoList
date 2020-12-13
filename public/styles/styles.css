@@ -34,10 +34,15 @@ header {
   text-align: center;
 }
 
-h1 {
+header h1 {
+  font-size: 1.5rem;
   color: #caf755;
+  margin-bottom: 2rem;
 }
 
+header p {
+  margin-bottom: 1rem;
+}
 /* -------------- add to-do formula -------------- */
 
 /* -------------- to-do list -------------- */
