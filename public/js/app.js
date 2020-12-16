@@ -1,3 +1,6 @@
+
+
+
 class ToDo {
   constructor (value) {
     this._toDo = "<li>myTodo</li>";
@@ -16,17 +19,24 @@ class ToDo {
 }
 
 class ToDoList {
-  constructor (toDos = []) {
-    this._toDos = toDos;
-    this._toDoList = createElement('UL').id('itemsList');
-    console.log(this._toDoList);
-    document.forms[0].append(this._toDoList);
+  constructor () {
+    this._toDos = [];
 
+    // we ask aria, ? set/function : ok?
+    this._toDoList = document.createElement('UL');
+    this._toDoList.id = "itemsList";
+    //console.log(this._toDoList);
+    document.querySelector('main').append(this._toDoList);
   }
+
+
+
+
+
 
   /* execute when click the add button, gets input value, does trim, validation ... , creates a new ToDo, adds it to the List (call addToList() method)*/
   createToDo (inputValue) {
-
+    console.log('to do vreated')
   }
 
   /* adds the ToDo to the List (appendChild)*/
@@ -36,8 +46,35 @@ class ToDoList {
 
   /* remove() called on html elements -> target is the button remove the parent (li) */
   deleteToDo () {
-    
+
   }
 
 
 }
+
+
+
+
+const handleOnLoad = () => {
+    const myList = new ToDoList ();
+    return myList;
+}
+
+console.log(myList);
+
+const handleSubmit = (event) => {
+
+    event.preventDefault();
+
+    myList.createToDo(document.getElementById("inputUser").value);
+
+}
+
+// initialization onload
+
+window.addEventListener('load', handleOnLoad);
+
+// submit Handler
+
+document.forms[0].addEventListener('submit', handleSubmit);
+
