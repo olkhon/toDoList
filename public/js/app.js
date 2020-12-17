@@ -12,13 +12,11 @@ class ToDo {
 
     /*   this._toDo = "<li>myTodo</li>"; */
     this._markedAsDone = false;
+
+    this._toDoId = Date.now();
+
+    console.log(this._toDoId);
   }
-
-  /* click on the ToDo, adding/removing class strike */
-  toggleDone() {}
-
-  /* handles Click on the delete Button */
-  deleteToDo() {}
 }
 
 class ToDoList {
@@ -43,6 +41,7 @@ class ToDoList {
     this._toDoList.appendChild(this._toDoObject._newLi);
 
     this._toDoObject._newButton.addEventListener("click", this.deleteToDo);
+    this._toDoObject._newLi.addEventListener("click", this.toggleDone);
 
     this.addToList(this._toDoObject);
     console.log(this._toDos);
@@ -67,8 +66,15 @@ class ToDoList {
     console.log(this._toDos); */
   }
 
+  /* click on the ToDo, adding/removing class strike */
+  toggleDone(event) {
+    event.target.classList.toggle("strike");
+    event.target.parentNode.appendChild(event.target);
+  }
+
   /* remove() called on html elements -> target is the button remove the parent (li) */
   deleteToDo(event) {
+    console.log(event.target);
     event.target.parentElement.remove();
   }
 }
