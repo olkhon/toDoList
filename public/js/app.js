@@ -43,25 +43,6 @@ class ToDoList {
 
     this.addToList(this._toDoObject);
     console.log(this._toDos);
-
-    /*     this._newLi = document.createElement("LI");
-    this._textInput = document.createTextNode(inputValue);
-    this._newLi.appendChild(this._textInput);
-    this._toDoList.appendChild(this._newLi);
-
-    this._newButton = document.createElement("button");
-    this._buttonText = document.createTextNode("X");
-    this._newButton.appendChild(this._buttonText);
-    this._newLi.appendChild(this._newButton);
-    this.addToList(this._newLi);
-    this._newButton.addEventListener("click", function (e) {
-      // e.target.parentNode.remove();
-      e.target.parentElement.remove();
-    });
-
-    // addToList(this._newLi);
-
-    console.log(this._toDos); */
   }
 
   /* click on the ToDo, adding/removing class strike */
