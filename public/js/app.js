@@ -4,6 +4,8 @@ class ToDo {
     this._newLi = document.createElement("LI");
     this._newLi.appendChild(this._textInput);
 
+    this._newLi.id = Date.now();
+
     this._newButton = document.createElement("button");
     this._buttonText = document.createTextNode("X");
     this._newButton.appendChild(this._buttonText);
@@ -12,10 +14,6 @@ class ToDo {
 
     /*   this._toDo = "<li>myTodo</li>"; */
     this._markedAsDone = false;
-
-    this._toDoId = Date.now();
-
-    console.log(this._toDoId);
   }
 }
 
@@ -74,6 +72,12 @@ class ToDoList {
 
   /* remove() called on html elements -> target is the button remove the parent (li) */
   deleteToDo(event) {
+    console.log(this._toDos);
+
+    for (let i = 0; i < this._toDos.length; i++) {
+      console.log(this._toDos[i]);
+    }
+
     console.log(event.target);
     event.target.parentElement.remove();
   }
