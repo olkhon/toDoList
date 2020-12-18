@@ -32,8 +32,19 @@ class ToDoList {
 
   /* execute when click the add button, gets input value, does trim, validation ... , creates a new ToDo, adds it to the List (call addToList() method)*/
   createToDo(inputValue) {
+    // sets Value of Input Field to zero after input has been provided
+    document.getElementById('inputUser').value = '';
+
+    //validation
+    if ((inputValue.trim() === "")) {
+      alert('Please write something');
+      return;
+    } 
+
     this._toDoObject = new ToDo(inputValue);
-    this._toDoList.appendChild(this._toDoObject._newLi);
+    this._toDoList.insertBefore(this._toDoObject._newLi, this._toDoList.childNodes[0]);
+
+    /* this._toDoList.appendChild(this._toDoObject._newLi); */
 
     this._toDoObject._newButton.addEventListener("click", this.deleteToDo.bind(this));
     this._toDoObject._newLi.addEventListener("click", this.toggleDone.bind(this));
