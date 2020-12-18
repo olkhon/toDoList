@@ -44,9 +44,14 @@ class ToDoList {
 
   /* click on the ToDo, adding/removing class strike */
   toggleDone(event) {
-    console.log(this._toDos);
-    event.target.classList.toggle("strike");
-    event.target.parentNode.appendChild(event.target);
+    const listItem = event.target;
+    const list = listItem.parentElement;
+    if (listItem.classList.value.includes("strike")) {
+      list.insertBefore(listItem, list.childNodes[0]); 
+    } else {
+      list.appendChild(listItem);
+    }
+    listItem.classList.toggle("strike");
   }
 
   /* remove() called on html elements -> target is the button remove the parent (li) */
