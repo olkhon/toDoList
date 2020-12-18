@@ -1,81 +1,99 @@
-// to-do list
-const toDoList = document.getElementById("itemsList");
+class ToDo {
+  constructor(value) {
+    this._textInput = document.createTextNode(value);
+    this._newLi = document.createElement("LI");
+    this._newLi.appendChild(this._textInput);
 
-// listen for submit event
-let addSubmit = document.getElementById("add");
+    this._newLi.id = Date.now();
 
-const addToDo = (event) => {
-    event.preventDefault();
-};
-
-addSubmit.addEventListener("click", addToDo);
-
-//
-
-// Click on a delete button to delete the current list item
-
-const deleteButton = document.getElementsByTagName("button");
-
-const arrayDeleteButton = Array.from(deleteButton);
-//console.log(arrayDeleteButton);
-for (let i = 0; i < arrayDeleteButton.length; i++) {
-    arrayDeleteButton[i].addEventListener("click", function() {
-        const toDoToDelete = document.getElementsByTagName("li");
-        const arraytoDoToDelete = Array.from(toDoToDelete);
-        for (let j = 0; j < arraytoDoToDelete.length; j++) {
-            arraytoDoToDelete[j].addEventListener('click', function() {
-                arraytoDoToDelete[j].remove();
-            })
-        }
-    })
+    this._newButton = document.createElement("button");
+    this._buttonText = document.createTextNode("X");
+    this._newButton.appendChild(this._buttonText);
+    this._newLi.appendChild(this._newButton);
+  }
 }
 
+class ToDoList {
+  constructor() {
+    this._toDos = [];
 
-//
 
-// eventHandler for toggle to-do to be striked out when done or unstrike
+    // we ask aria, ? set/function : ok?
+    this._toDoList = document.createElement("UL");
+    this._toDoList.id = "itemsList";
+    //console.log(this._toDoList);
+    document.querySelector("main").append(this._toDoList);
+  }
 
-const toggleDone = (event) => {
-    console.log(event.target);
-    /* console.log(this);
-    console.log(event.target); */
-    event.target.classList.toggle("strike");
-    event.target.parentNode.appendChild(event.target);
+  /* adds the ToDo to the List (appendChild)*/
+  addToList() {
+    this._toDos.push(this._toDoObject);
+  }
+
+  /* execute when click the add button, gets input value, does trim, validation ... , creates a new ToDo, adds it to the List (call addToList() method)*/
+  createToDo(inputValue) {
+    // sets Value of Input Field to zero after input has been provided
+    document.getElementById('inputUser').value = '';
+
+    //validation
+    if ((inputValue.trim() === "")) {
+      alert('Please write something');
+      return;
+    } 
+
+    this._toDoObject = new ToDo(inputValue);
+    this._toDoList.insertBefore(this._toDoObject._newLi, this._toDoList.childNodes[0]);
+
+    /* this._toDoList.appendChild(this._toDoObject._newLi); */
+
+    this._toDoObject._newButton.addEventListener("click", this.deleteToDo.bind(this));
+    this._toDoObject._newLi.addEventListener("click", this.toggleDone.bind(this));
+
+    this.addToList(this._toDoObject);
+
+  }
+
+  /* click on the ToDo, adding/removing class strike */
+  toggleDone(event) {
+    const listItem = event.target;
+    const list = listItem.parentElement;
+    if (listItem.classList.value.includes("strike")) {
+      list.insertBefore(listItem, list.childNodes[0]); 
+    } else {
+      list.appendChild(listItem);
+    }
+    listItem.classList.toggle("strike");
+  }
+
+  /* remove() called on html elements -> target is the button remove the parent (li) */
+  deleteToDo(event) {
+
+    this._toDos.forEach((element, index) => {
+      if(element._newLi.id === event.target.parentElement.id) {
+        this._toDos.splice(index, 1);
+      }
+    });
+    event.target.parentElement.remove();
+
+
+  }
+}
+
+const handleOnLoad = () => {
+  return (myList = new ToDoList());
 };
 
-// eventListener for toggeling done/todo items
-toDoList.addEventListener("click", toggleDone);
+//console.log(myList);
 
-// add new Item to do list
+const handleSubmit = (event) => {
+  event.preventDefault();
+  myList.createToDo(document.getElementById("inputUser").value);
+};
 
-let listItems = document.getElementById("itemsList");
+// initialization onload
 
-addSubmit.addEventListener("click", () => {
-    let getInput = document.getElementById("inputUser").value;
-    let getJustEmptySpace = getInput.trim();
-    document.getElementById('inputUser').value = ''
+window.addEventListener("load", handleOnLoad);
 
-    if ((getInput !== "") && (getJustEmptySpace.length !== 0)) {
+// submit Handler
 
-        //Create LI
-        let newLi = document.createElement("LI");
-        let textInput = document.createTextNode(getInput);
-        newLi.appendChild(textInput);
-
-        //Create Button
-        let newButton = document.createElement("button");
-        let buttonText = document.createTextNode("X");
-        newButton.appendChild(buttonText);
-        newButton.addEventListener("click", function() {
-            newLi.remove();
-        });
-        //Create full ToDo (LI + Button)
-        newLi.appendChild(newButton);
-        //Append new List Item (newLi)
-        listItems.appendChild(newLi);
-    } else if (getJustEmptySpace.length === 0) {
-        alert('You cannot provide just white spaces');
-    } else if (getInput === "") {
-        alert('Input cannot be empty ');
-    }
-});
+document.forms[0].addEventListener("submit", handleSubmit);
